@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Images",
+    "short_name": "ChatGPT Images",
+    "description": "Let chatgpt generate simple images for you, without paying a prenium subscription.",
+    "version": "1.0",
+    "author": "JdM",
+    "homepage_url": "https://www.rmbi.ch/jdm",
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "chatgptimages@example.com"
+      }
+    },  
+    "action": {
+      "default_title": "ChatGPT Images",
+      "default_popup": "popup/index.html"
+    },
+    "content_scripts": [
+      {
+        "js": [
+          "content.js"
+        ],
+        "matches": [
+          "*://*.chat.openai.com/*"
+        ],
+        "run_at": "document_end"
+      }
+    ]
+  }
