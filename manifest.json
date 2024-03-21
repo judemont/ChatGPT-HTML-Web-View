@@ -13,7 +13,7 @@
     },  
     "action": {
       "default_title": "ChatGPT HTML Web View",
-      "default_popup": "popup/index.html"
+      "default_popup": "popup.html"
     },
     "content_scripts": [
       {
