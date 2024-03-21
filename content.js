@@ -15,12 +15,11 @@ setInterval(() => {
             codeSpace.parentElement.style.padding = "0";
             iframe.style.width = "100%";
             iframe.style.height = "60vh";
+            iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts');
 
             codeSpace.appendChild(iframe);
 
-            iframe.contentWindow.document.open();
-            iframe.contentWindow.document.write(codeContent);
-            iframe.contentWindow.document.close();
+            iframe.srcdoc = codeContent;
         }
     });
 }, 2000);
